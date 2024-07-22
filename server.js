@@ -4,14 +4,19 @@ require("dotenv").config();
 const express = require("express");
 const methodOverride = require("method-override");
 const morgan = require("morgan");
+const app = express();
+app.use(morgan("dev"));
 
 // DATABASE
 require("./config/database");
 
-const Car = require("./models/cars.js");
+//const Car = require("./models/cars.js");
 
-const app = express();
+const carCntrl = require("./controller/car.js");
 
-app.get("/", (res, req, next) => {
-  res.render("/views/hime.ejs");
+app.get("/", carCntrl.home);
+app.get("/cars", carCntrl.index);
+
+app.listen(3000, () => {
+  console.log("The express app is ready!");
 });
