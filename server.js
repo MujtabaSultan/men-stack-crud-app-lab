@@ -8,6 +8,10 @@ const morgan = require("morgan");
 // DATABASE
 require("./config/database");
 
-const Fruit = require("./models/fruit.js");
+const Car = require("./models/cars.js");
 
 const app = express();
+
+app.get("/", (res, req, next) => {
+  res.render("/views/hime.ejs");
+});
