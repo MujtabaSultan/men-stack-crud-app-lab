@@ -1,0 +1,19 @@
+<!-- views/fruits/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruits Index</title>
+  </head>
+  <body>
+    <h1>All Fruits</h1>
+    <a href="/cars/new">Add New Car</a>
+    <ul>
+      <% cars.forEach((element) => { %>
+      <li><a href="/cars/<%= element._id %>"> <%= element.name %> </a></li>
+      <% }); %>
+    </ul>
+  </body>
+</html>

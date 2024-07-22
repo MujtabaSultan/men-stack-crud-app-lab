@@ -7,22 +7,22 @@ const new1 = (req, res) => {
 };
 const create = async (req, res) => {
   req.body.isReadyToEat = req.body.isReadyToEat === "on";
-  await car.create(req.body);
+  await Car.create(req.body);
   res.redirect("/cars");
 };
 // Display all cars
 const index = async (req, res) => {
-  const foundcars = await car.find();
+  const foundcars = await Car.find();
   res.render("cars/index.ejs", { cars: foundcars });
 };
 const show = async (req, res) => {
-  const foundcar = await car.findById(req.params.carId);
+  const foundcar = await Car.findById(req.params.carId);
   res.render("cars/show.ejs", {
     car: foundcar,
   });
 };
 const delete1 = async (req, res) => {
-  await car.findByIdAndDelete(req.params.carId);
+  await Car.findByIdAndDelete(req.params.carId);
   res.redirect("/cars");
 };
 const update = async (req, res) => {
@@ -31,11 +31,11 @@ const update = async (req, res) => {
   } else {
     req.body.isReadyToEat = false;
   }
-  await car.findByIdAndUpdate(req.params.carId, req.body);
+  await Car.findByIdAndUpdate(req.params.carId, req.body);
   res.redirect(`/cars`);
 };
 const edit = async (req, res) => {
-  const foundcar = await car.findById(req.params.carId);
+  const foundcar = await Car.findById(req.params.carId);
   res.render("cars/edit.ejs", {
     car: foundcar,
   });
