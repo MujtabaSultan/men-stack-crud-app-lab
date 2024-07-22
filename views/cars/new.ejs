@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Fruit</title>
+  </head>
+  <body>
+    <h1>Create a New Car!</h1>
+    <a href="/cars/">Back to Cars</a>
+    <form action="/cars" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" required />
+
+      <label for="type">whats the car manfacturer ?</label>
+      <input type="select" name="type" id="type" />
+
+      <label for="electric"> an electric car ?</label>
+      <input type="checkbox" name="electric" id="electric" />
+
+      <label for="v8">does it have v8 engine ?</label>
+      <input type="checkbox" name="v8" id="v8" />
+
+      <button type="submit">add car</button>
+    </form>
+  </body>
+</html>

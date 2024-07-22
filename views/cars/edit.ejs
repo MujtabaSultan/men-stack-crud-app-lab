@@ -1,0 +1,63 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editing cars</title>
+  </head>
+  <body>
+    <h1>Edit the car</h1>
+    <a href="/cars/">Back to cars</a>
+    <form action="/cars/<%= car._id %>?_method=PUT" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" value="<%= car.name %>" />
+
+      <label for="type">whats the car manfacturer ?</label>
+      <input type="select" name="type" id="type" value="<%=car.type%>" />
+
+     
+
+      <label for="v8">Does the car have a V8 engine?</label>
+      <input type="checkbox" name="v8" id="v8" <% if(car.v8) { %> checked <% } %> />
+
+      <label for="electric">Is the car electric?</label>
+      <input type="checkbox" name="electric" id="electric" <% if(car.electric) { %> checked<% } %> />
+
+      <button type="submit">Edit Car</button>
+    </form>
+  </body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>editing</title>
+  </head>
+  <body>
+    <h1>edit the car</h1>
+    <a href="/cars/">Back to cars</a>
+    <form action="/cars/<%= car._id %>?_method=PUT" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" value="<%= car.name %>" />
+
+      <label for="type">whats the car manfacturer ?</label>
+      <input type="select" name="type" id="type" value="<%=car.type%>" />
+
+     
+
+      <label for="v8">Does the car have a V8 engine?</label>
+      <input type="checkbox" name="v8" id="v8" <% if(car.v8) { %> checked <% } %> />
+
+      <label for="electric">Is the car electric?</label>
+      <input type="checkbox" name="electric" id="electric" <% if(car.electric) { %> checked<% } %> />
+
+      <button type="submit">Edit Car</button>
+    </form>
+  </body>
+</html>
+

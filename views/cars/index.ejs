@@ -8,11 +8,11 @@
     <title>Fruits Index</title>
   </head>
   <body>
-    <h1>All Fruits</h1>
+    <h1>All Cars</h1>
     <a href="/cars/new">Add New Car</a>
     <ul>
       <% cars.forEach((element) => { %>
-      <li><a href="/cars/<%= element._id %>"> <%= element.name %> </a></li>
+      <li><a href="/cars/<%= element.id %>"> <%= element.name %> </a></li>
       <% }); %>
     </ul>
   </body>
